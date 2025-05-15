@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/prismamicroservicetrain/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/prismamicroservicetrain/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/prismamicroservicetrain",
+  "projects": {
+    "microcervprisma": {
+      "type": "application",
+      "root": "apps/microcervprisma",
+      "entryFile": "main",
+      "sourceRoot": "apps/microcervprisma/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/microcervprisma/tsconfig.app.json"
+      }
+    },
+    "prismamicroservicetrain": {
+      "type": "application",
+      "root": "apps/prismamicroservicetrain",
+      "entryFile": "main",
+      "sourceRoot": "apps/prismamicroservicetrain/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/prismamicroservicetrain/tsconfig.app.json"
+      }
+    }
+  }
+}
