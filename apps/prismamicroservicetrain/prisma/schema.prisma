@@ -1,0 +1,16 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Moto {
+  id     Int    @id @default(autoincrement())
+  moto1  String
+  moto2  String
+  moto3  String
+  ugauga String @default("bugabuga")
+}
